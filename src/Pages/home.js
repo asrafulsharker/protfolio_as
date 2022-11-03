@@ -4,7 +4,7 @@ function home() {
   return (
     <div>
       <Nav/>
-        <h1>Hi Nirob!</h1>
+        {/* <h1>Hi Nirob!</h1> */}
     </div>
   )
 }

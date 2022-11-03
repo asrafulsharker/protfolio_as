@@ -1,40 +1,30 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import {useRef} from 'react';
+import {FaBars, FaTimes} from 'react-icons/fa'
+import React from 'react';
+import "../style/nav.css"
+function Navbar(){
+    const navRef = useRef();
 
-function CollapsibleExample() {
-  return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-          <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-  );
+    const showNavbar = ()=>{
+        navRef.current.classList.toggle("responsive_nav");
+    }
+    return(
+        <header>
+            <h3>Logo</h3>
+            <nav ref={navRef}>
+                <a href='/#'>Home</a>
+                <a href='/#'>My work</a>
+                <a href='/#'>Blog</a>
+                <a href='/#'>About Me</a>
+                <button className='nav-btn nav-close-btn' onClick={showNavbar}>
+                    <FaTimes/>
+                </button>
+                <button className='nav-btn' onClick={showNavbar}>
+                    <FaBars/>
+                </button>
+            </nav>
+        </header>
+    )
 }
 
-export default CollapsibleExample;
+export default Navbar;

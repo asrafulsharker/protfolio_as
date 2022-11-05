@@ -1,6 +1,11 @@
 import React, {useEffect, useState} from 'react'
 import Typewriter from 'typewriter-effect';
 import home from '../Pages/home';
+import HeroImg from '../img/profile1.png';
+import { FiLinkedin, FiGithub ,FiFacebook} from "react-icons/fi";
+import {SiGmail, SiReact} from 'react-icons/si';
+import {FaNode} from 'react-icons/fa';
+import {DiIllustrator, DiPhotoshop} from 'react-icons/di';
 
 const Hero = () => {
     const [state]= useState({
@@ -33,9 +38,23 @@ const Hero = () => {
                         }}/>
                     </div>
                     <p className='hero-discription'>I use animation as a third dimension by which to simplify experiences and kuiding thro each and every interaction. I’m not adding motion just to spruce things up, but doing it in ways that.</p>
+                        <div className='row'>
+                            <div className='col-md-6'>
+                                <FiFacebook/>
+                                <FiLinkedin/>
+                                <SiGmail/>
+                                <FiGithub/>
+                            </div>
+                            <div className='col-md-6'>
+                                <SiReact/>
+                                <FaNode/>
+                                <DiIllustrator/>
+                                <DiPhotoshop/>
+                            </div>
+                        </div>
                 </div>
                 <div className='col-md-4'>
-                    jyth
+                    <img src={HeroImg}/>
                 </div>
             </div>
         </div>

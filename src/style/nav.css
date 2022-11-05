@@ -6,7 +6,7 @@
 }
 
 :root {
-	--mainColor: #29335c;
+	--mainColor: #232530;
 	--mainColorLight: #5767aa;
 	--secondaryColor: #db2b39;
 	--textColor: #eee;
@@ -22,10 +22,15 @@ header {
 	color: var(--textColor);
 }
 
+.logo{
+	text-transform: uppercase;
+}
+
 nav a {
-	margin: 0 1rem;
+	margin: 0 1.5rem;
 	color: var(--textColor);
 	text-decoration: none;
+	text-transform: uppercase;
 }
 
 nav a:hover {
@@ -42,6 +47,7 @@ header .nav-btn {
 	visibility: hidden;
 	opacity: 0;
 	font-size: 1.8rem;
+	
 }
 
 header div,
